@@ -1,7 +1,7 @@
 use crate::msg::{
     AddressOfResponse, ContractInfoResponse, GetParentIdResponse, GetPathResponse,
-    IsContractResponse, ListUserInfoResponse, PrimaryAliasResponse, UserInfo,
-    RxpnamerNftInfoResponse,
+    IsContractResponse, ListUserInfoResponse, PrimaryAliasResponse, RxpnamerNftInfoResponse,
+    UserInfo,
 };
 use crate::state::{CONTRACT_INFO, MINTING_FEES_INFO, PRIMARY_ALIASES};
 use crate::utils::{is_path, namespace_in_path, remove_namespace_from_path};

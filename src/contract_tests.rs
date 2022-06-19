@@ -13,8 +13,8 @@ mod tests {
     use crate::msg::{
         AddressOfResponse, ContractInfoResponse, ExecuteMsg, Extension, GetParentIdResponse,
         GetPathResponse, InstantiateMsg, IsContractResponse, Metadata, MintMsg,
-        PrimaryAliasResponse, QueryMsg, SurchargeInfo, UpdateMetadataMsg, UpdateMintingFeesMsg,
-        RxpnamerNftInfoResponse,
+        PrimaryAliasResponse, QueryMsg, RxpnamerNftInfoResponse, SurchargeInfo, UpdateMetadataMsg,
+        UpdateMintingFeesMsg,
     };
     use crate::Cw721MetadataContract;
     use cosmwasm_std::{
