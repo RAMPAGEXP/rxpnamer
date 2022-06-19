@@ -7,7 +7,7 @@ then
 fi
 
 # pinched and adapted from DA0DA0
-IMAGE_TAG=${2:-"v0.1.0-alpha"}
+IMAGE_TAG=${2:-"v0.1.1-alpha"}
 CONTAINER_NAME="rxp_rxpnamer"
 BINARY="docker exec -i $CONTAINER_NAME rxpd"
 DENOM='urxpx'

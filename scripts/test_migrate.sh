@@ -7,7 +7,7 @@ then
 fi
 
 # pinched and adapted from DA0DA0
-IMAGE_TAG=${2:-"v0.1.0-alpha"}
+IMAGE_TAG=${2:-"v0.1.1-alpha"}
 CONTAINER_NAME="rxp_rxpnamer"
 BINARY="docker exec -i $CONTAINER_NAME rxpd"
 DENOM='urxpx'
@@ -134,7 +134,7 @@ echo "Stored: $NEW_CONTRACT_CODE"
 echo "Attemping to migrate $CONTRACT_ADDRESS to contract code $NEW_CONTRACT_CODE"
 
 MIGRATE='{
-  "target_version": "0.1.0-alpha"
+  "target_version": "0.1.1-alpha"
 }'
 MIGRATE_RES=$($BINARY tx wasm migrate "$CONTRACT_ADDRESS" $NEW_CONTRACT_CODE "$MIGRATE" --from test-user $TXFLAG --output json)
 RES_2=$?
