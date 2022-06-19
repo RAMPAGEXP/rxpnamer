@@ -10,8 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build optimised
-        run: chmod +x ./scripts/build_optimised_release.sh
-        run: ./scripts/build_optimised_release.sh
+        run: chmod +x ./scripts/build_optimised_release.sh        
       - name: Get release ID
         id: get_release
         uses: bruceadams/get-release@v1.2.3
