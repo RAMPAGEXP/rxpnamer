@@ -1,4 +1,4 @@
-# RXPnamer
+# Rxpnamer
 
 This is an adaptation of the cw-nfts onchain metadata contract to
 allow for listing of usernames on multiple services via NFT metadata.

@@ -9,7 +9,7 @@ BINARY='rxpd'
 DENOM='urxp'
 CHAIN_ID='rxp-1'
 RPC='http://localhost:26657/'
-LABEL="RXPnamer NFT nameservice"
+LABEL="Rxpnamer NFT nameservice"
 TXFLAG="--gas-prices auto --gas auto --gas-adjustment 2 -y -b block --chain-id $CHAIN_ID --node $RPC"
 
 # compile

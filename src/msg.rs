@@ -104,7 +104,7 @@ pub type Extension = Metadata;
 
 pub type MintMsg = CW721MintMsg<Extension>;
 
-pub type RXPnamerNftInfoResponse = NftInfoResponse<Extension>;
+pub type RxpnamerNftInfoResponse = NftInfoResponse<Extension>;
 
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug, Default)]
 pub struct UpdateMetadataMsg {
