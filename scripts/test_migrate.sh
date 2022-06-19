@@ -34,7 +34,7 @@ docker run --rm -d --name $CONTAINER_NAME \
     ghcr.io/RAMPAGEXP/rxp:$IMAGE_TAG /opt/setup_and_run.sh $1
 
 # copy wasm to docker container
-docker cp versioned_builds/rxpnamer_0_0_1.wasm $CONTAINER_NAME:/rxpnamer_0_0_1.wasm
+docker cp versioned_builds/rxpnamer_0_1_1.wasm $CONTAINER_NAME:/rxpnamer_0_1_1.wasm
 
 # wait for chain to start
 sleep 5
@@ -54,7 +54,7 @@ echo "Address to deploy contracts: $1"
 echo "TX Flags: $TXFLAG"
 
 # upload rxpnamer wasm
-CONTRACT_CODE=$($BINARY tx wasm store "/rxpnamer_0_0_1.wasm" --from validator $TXFLAG --output json | jq -r '.logs[0].events[-1].attributes[0].value')
+CONTRACT_CODE=$($BINARY tx wasm store "/rxpnamer_0_1_1.wasm" --from validator $TXFLAG --output json | jq -r '.logs[0].events[-1].attributes[0].value')
 echo "Stored: $CONTRACT_CODE"
 
 BALANCE_2=$($BINARY q bank balances $VALIDATOR_ADDR)
