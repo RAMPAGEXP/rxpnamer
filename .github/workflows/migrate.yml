@@ -21,5 +21,8 @@ jobs:
           target: wasm32-unknown-unknown
           override: true
 
+      - name: Permission Grant
+        run: chmod +x scripts/test_migrate.sh    
+
       - name: Test migration
-        run: chmod +x ./scripts/test_migrate.sh rxp16g2rahf5846rxzp3fwlswy08fz8ccuwk03k57y
+        run: ./scripts/test_migrate.sh rxp16g2rahf5846rxzp3fwlswy08fz8ccuwk03k57y
