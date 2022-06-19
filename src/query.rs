@@ -1,7 +1,7 @@
 use crate::msg::{
     AddressOfResponse, ContractInfoResponse, GetParentIdResponse, GetPathResponse,
     IsContractResponse, ListUserInfoResponse, PrimaryAliasResponse, UserInfo,
-    RXPnamerNftInfoResponse,
+    RxpnamerNftInfoResponse,
 };
 use crate::state::{CONTRACT_INFO, MINTING_FEES_INFO, PRIMARY_ALIASES};
 use crate::utils::{is_path, namespace_in_path, remove_namespace_from_path};
@@ -234,7 +234,7 @@ pub fn get_parent_nft_info(
     contract: Cw721MetadataContract,
     deps: Deps,
     token_id: String,
-) -> StdResult<RXPnamerNftInfoResponse> {
+) -> StdResult<RxpnamerNftInfoResponse> {
     let token = contract.tokens.load(deps.storage, &token_id)?;
 
     match token.extension.parent_token_id {
@@ -242,7 +242,7 @@ pub fn get_parent_nft_info(
             // attempt to load parent
             let parent_token = contract.tokens.load(deps.storage, &pti)?;
 
-            Ok(RXPnamerNftInfoResponse {
+            Ok(RxpnamerNftInfoResponse {
                 token_uri: parent_token.token_uri,
                 extension: parent_token.extension,
             })
