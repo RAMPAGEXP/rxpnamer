@@ -21,7 +21,7 @@ jobs:
           target: wasm32-unknown-unknown
           override: true
 
-        - name: Test migration
-          run: |
-            chmod a+x ./scripts/test_migrate.sh
-            ./scripts/test_migrate.sh rxp16g2rahf5846rxzp3fwlswy08fz8ccuwk03k57y
+      - name: Test migration
+        run: |
+          chmod a+x ./scripts/test_migrate.sh
+          ./scripts/test_migrate.sh rxp16g2rahf5846rxzp3fwlswy08fz8ccuwk03k57y
